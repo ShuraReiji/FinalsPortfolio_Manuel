@@ -1,44 +1,62 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+// Import the local image
+import myImage from "../assets/Manuel.jpg";
 
 export default function About() {
-    return (
-        <section id="about">
-          <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
-            <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-              <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-                Hi, I'm Kent.
-                <br className="hidden lg:inline-block" />I love to build amazing
-                apps.
-              </h1>
-              <p className="mb-8 leading-relaxed">
-                From sleek, modern websites to dynamic, scalable applications, I
-                bring your ideas to life with precision and passion. Let’s create
-                something incredible together — tailored just for your needs and
-                vision.
-              </p>
-              <div className="flex justify-center">
-                <a
-                  href="#contact"
-                  className="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg"
-                >
-                  Work With Me
-                </a>
-                <a
-                  href="#projects"
-                  className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg"
-                >
-                  See My Past Work
-                </a>
-              </div>
-            </div>
-            <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-              <img
-                className="object-cover object-center rounded-full"
-                alt="hero"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7N_-tv1TAZ7hYCqFLVV4oQ1XNTwFn__OzJw&s"
-              />
-            </div>
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
+  return (
+    <section id="about" className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+      <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row-reverse items-center">
+        
+        {/* Right Side: Profile Image */}
+        <div className="lg:w-1/2 md:w-1/2 w-5/6 ml-auto" data-aos="fade-left">
+          <img
+            className="object-cover object-center rounded-full shadow-xl ring-4 ring-purple-400"
+            alt="Francis Luis"
+            src={myImage} // Use the imported image here
+          />
+        </div>
+
+        {/* Left Side: Text Content */}
+        <div
+          className="lg:max-w-lg lg:w-1/2 md:w-1/2 text-center md:text-left flex flex-col items-center md:items-start mb-12 md:mb-0"
+          data-aos="fade-right"
+        >
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-white leading-tight mb-6">
+            Hi, The name's Francis Luis. Most people call me Louie.
+            <br className="hidden lg:inline-block" />
+            I love to build amazing apps.
+          </h1>
+          <p className="text-lg text-white mb-8 leading-relaxed max-w-xl">
+            From sleek, modern websites to dynamic, scalable applications, I
+            bring your ideas to life with precision and passion. Let's create
+            something incredible together — tailored just for your needs and
+            vision.
+          </p>
+          <div className="flex justify-center md:justify-start gap-4">
+            <a
+              href="#contact"
+              className="inline-flex items-center justify-center text-white bg-green-500 py-3 px-8 rounded-lg text-lg font-semibold shadow-md transition-all transform hover:scale-105 hover:bg-green-600"
+              data-aos="zoom-in"
+            >
+              Talk to Me
+            </a>
+            <a
+              href="#projects"
+              className="inline-flex items-center justify-center text-gray-300 bg-gray-800 py-3 px-8 rounded-lg text-lg font-semibold shadow-md transition-all transform hover:scale-105 hover:bg-gray-700 hover:text-white"
+              data-aos="zoom-in"
+            >
+              See My Past Work
+            </a>
           </div>
-        </section>
-      );
+        </div>
+      </div>
+    </section>
+  );
 }
