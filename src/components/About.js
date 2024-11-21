@@ -11,13 +11,13 @@ export default function About() {
   }, []);
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+    <section id="about" className="py-20 bg-gradient-to-r from-blue-900 to-purple-900">
       <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row-reverse items-center">
         
         {/* Right Side: Profile Image */}
         <div className="lg:w-1/2 md:w-1/2 w-5/6 ml-auto" data-aos="fade-left">
           <img
-            className="object-cover object-center rounded-full shadow-xl ring-4 ring-purple-400"
+            className="object-cover object-center rounded-full shadow-xl ring-4 ring-purple-700"
             alt="Francis Luis"
             src={myImage} // Use the imported image here
           />
