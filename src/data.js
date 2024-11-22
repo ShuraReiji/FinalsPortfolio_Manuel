@@ -14,7 +14,7 @@ export const projects = [
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
       image:
         require('./assets/Weather.png'),
-      link: "https://github.com/kentbrianbravo/ts",
+      link: "https://github.com/ShuraReiji/WSATFinalsTest",
     },
     {
       title: "API Login Tests",
@@ -23,7 +23,7 @@ export const projects = [
         "Postman testing for API Logins",
       image:
       require('./assets/postman.png'),
-      link: "https://github.com/kentbrianbravo/ts",
+      link: "https://github.com/ShuraReiji/APILoginTest",
     },
 
   ];
