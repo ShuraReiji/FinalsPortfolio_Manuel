@@ -3,7 +3,7 @@ export const projects = [
       title: "WordQuest",
       subtitle: "RPG Maker Game",
       description:
-        "This is a game designed for children to learn basic English",
+        "This is a game designed for children to learn basic English. Developed for my Thesis.",
         image: require('./assets/rpgmaker.jpg'),
       link: "https://github.com/kentbrianbravo/ts",
     },
@@ -11,7 +11,7 @@ export const projects = [
       title: "Weather Tracking Site",
       subtitle: "JS and CSS",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+      "This is a site I developed to specifically track the weather around the world as a project.",
       image:
         require('./assets/Weather.png'),
       link: "https://github.com/ShuraReiji/WSATFinalsTest",
