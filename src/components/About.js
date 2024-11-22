@@ -7,53 +7,69 @@ import myImage from "../assets/Manuel.jpg";
 
 export default function About() {
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
+    AOS.init({ duration: 1200, once: true });
   }, []);
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-r from-blue-900 to-purple-900">
-      <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row-reverse items-center">
-        
-        {/* Right Side: Profile Image */}
-        <div className="lg:w-1/2 md:w-1/2 w-5/6 ml-auto" data-aos="fade-left">
-          <img
-            className="object-cover object-center rounded-full shadow-xl ring-4 ring-purple-700"
-            alt="Francis Luis"
-            src={myImage} // Use the imported image here
-          />
-        </div>
+    <section
+      id="about"
+      className="relative bg-gradient-to-b from-blue-900 via-black to-purple-900 py-20 overflow-hidden"
+    >
+      {/* Parallax Background */}
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-20"
+        style={{
+          backgroundImage: `url(${myImage})`,
+        }}
+      ></div>
 
+      <div className="relative container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center">
         {/* Left Side: Text Content */}
         <div
           className="lg:max-w-lg lg:w-1/2 md:w-1/2 text-center md:text-left flex flex-col items-center md:items-start mb-12 md:mb-0"
           data-aos="fade-right"
         >
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-white leading-tight mb-6">
-            Hi, The name's Francis Luis. Most people call me Louie.
+          <h1 className="text-5xl sm:text-6xl font-extrabold text-white leading-tight mb-6 tracking-wide">
+            Hey there! I’m <span className="text-purple-400">Francis Luis</span>.
             <br className="hidden lg:inline-block" />
-            I love to build amazing apps.
+            Let’s create magic together.
           </h1>
-          <p className="text-lg text-white mb-8 leading-relaxed max-w-xl">
-            From sleek, modern websites to dynamic, scalable applications, I
-            bring your ideas to life with precision and passion. Let's create
-            something incredible together — tailored just for your needs and
-            vision.
+          <p className="text-lg text-gray-300 mb-8 leading-relaxed max-w-xl">
+            Whether it’s sleek websites or game-changing apps, I bring your
+            vision to life with passion and precision. Ready to build something
+            unforgettable? Let’s make it happen!
           </p>
-          <div className="flex justify-center md:justify-start gap-4">
+          <div className="flex justify-center md:justify-start gap-6">
             <a
               href="#contact"
-              className="inline-flex items-center justify-center text-white bg-green-500 py-3 px-8 rounded-lg text-lg font-semibold shadow-md transition-all transform hover:scale-105 hover:bg-green-600"
+              className="inline-flex items-center justify-center bg-gradient-to-r from-green-400 to-blue-500 text-white py-3 px-10 rounded-full text-lg font-bold shadow-lg transform transition-transform hover:scale-110"
               data-aos="zoom-in"
             >
-              Talk to Me
+              Let’s Talk
             </a>
             <a
               href="#projects"
-              className="inline-flex items-center justify-center text-gray-300 bg-gray-800 py-3 px-8 rounded-lg text-lg font-semibold shadow-md transition-all transform hover:scale-105 hover:bg-gray-700 hover:text-white"
+              className="inline-flex items-center justify-center bg-gray-800 text-gray-300 py-3 px-10 rounded-full text-lg font-bold shadow-lg transform transition-transform hover:scale-110 hover:bg-gray-700 hover:text-white"
               data-aos="zoom-in"
             >
-              See My Past Work
+              My Work
             </a>
+          </div>
+        </div>
+
+        {/* Right Side: Profile Image */}
+        <div
+          className="lg:w-1/2 md:w-1/2 w-5/6 ml-auto relative"
+          data-aos="fade-left"
+        >
+          <div className="relative w-64 h-64 mx-auto">
+            <img
+              className="object-cover object-center rounded-full shadow-2xl ring-8 ring-purple-700"
+              alt="Francis Luis"
+              src={myImage}
+            />
+            {/* Adjusted Ring */}
+            <div className="absolute inset-0 w-full h-full border-4 border-dashed border-purple-500 rounded-full animate-pulse"></div>
           </div>
         </div>
       </div>

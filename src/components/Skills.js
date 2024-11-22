@@ -12,39 +12,40 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="text-gray-400 bg-gradient-to-b from-gray-800 to-black body-font" // Reversed gradient: from dark grey to black
+      className="text-gray-700 bg-gray-100 body-font"
     >
-      <div className="container px-5 py-10 mx-auto">
-        <div className="text-center mb-20">
-          <ChipIcon className="w-10 inline-block mb-4" />
+      <div className="container px-5 py-16 mx-auto">
+        {/* Section Header */}
+        <div className="text-center mb-12">
+          <ChipIcon className="w-10 inline-block text-blue-500 mb-4" />
           <h1
-            className="sm:text-4xl text-3xl font-medium title-font text-white mb-4"
-            data-aos="fade-up" // AOS fade-up animation
+            className="sm:text-4xl text-3xl font-bold title-font text-gray-800"
+            data-aos="fade-up"
           >
-            Skills &amp; Technologies
+            Skills & Technologies
           </h1>
           <p
-            className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto"
-            data-aos="fade-up" // AOS fade-up animation
+            className="text-lg leading-relaxed text-gray-600 mx-auto max-w-3xl"
+            data-aos="fade-up"
             data-aos-delay="100"
           >
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi sit
-            ipsa delectus eum quo voluptas aspernatur accusantium distinctio
-            possimus est.
+            From foundational programming to cutting-edge technologies, these
+            are the tools I use to bring ideas to life with precision and
+            creativity.
           </p>
         </div>
-        <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
+
+        {/* Skills Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {skills.map((skill, index) => (
             <div
               key={skill}
-              className="p-2 sm:w-1/2 w-full"
-              data-aos="fade-up" // AOS fade-up animation for each skill
-              data-aos-delay={index * 100} // Stagger the animations
+              className="bg-white shadow-md rounded-lg p-6 flex items-center"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
             >
-              <div className="bg-gray-800 rounded flex p-4 h-full items-center">
-                <BadgeCheckIcon className="text-green-400 w-6 h-6 flex-shrink-0 mr-4" />
-                <span className="title-font font-medium text-white">{skill}</span>
-              </div>
+              <BadgeCheckIcon className="text-blue-500 w-8 h-8 flex-shrink-0 mr-4" />
+              <span className="font-medium text-lg text-gray-800">{skill}</span>
             </div>
           ))}
         </div>
