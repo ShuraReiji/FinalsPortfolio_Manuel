@@ -5,7 +5,7 @@ export const projects = [
       description:
         "This is a game designed for children to learn basic English. Developed for my Thesis.",
         image: require('./assets/rpgmaker.jpg'),
-      link: "https://github.com/kentbrianbravo/ts",
+      link: "https://drive.google.com/drive/folders/1etHpPoHrv1kDY5Y41IRte59KuhNXbdXc?usp=sharing",
     },
     {
       title: "Weather Tracking Site",
